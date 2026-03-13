@@ -8,7 +8,12 @@ import Contact from "./components/Contact";
 
 function App() {
   return (
-    <>
+    <div className="App">
+
+      {/* Background glow elements */}
+      <div className="glow"></div>
+      <div className="glow"></div>
+      <div className="glow"></div>
       
       {/* Website Sections */}
       <Navbar />
@@ -18,7 +23,7 @@ function App() {
       <Projects />
       <Stack />
       <Contact />
-    </>
+    </div>
   );
 }
 

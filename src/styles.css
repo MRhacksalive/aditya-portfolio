@@ -654,3 +654,59 @@ body {
     background-position: 0% 50%;
   }
 }
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(-45deg, #0a0a0a, #1a0000, #330000, #0a0a0a);
+  background-size: 400% 400%;
+  animation: backgroundFlow 12s ease infinite;
+  position: relative;
+}
+
+/* moving gradient */
+@keyframes backgroundFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* random glow blobs */
+.glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255,0,0,0.6), transparent 70%);
+  filter: blur(80px);
+  opacity: 0;
+  animation: glowMove 12s infinite;
+}
+
+.glow:nth-child(1) {
+  top: 10%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.glow:nth-child(2) {
+  top: 70%;
+  left: 60%;
+  animation-delay: 4s;
+}
+
+.glow:nth-child(3) {
+  top: 40%;
+  left: 80%;
+  animation-delay: 8s;
+}
+
+@keyframes glowMove {
+  0% { opacity: 0; transform: scale(0.8) translate(0,0); }
+  30% { opacity: 0.8; }
+  60% { transform: scale(1.2) translate(-40px, 40px); }
+  100% { opacity: 0; }
+}
+.glow {
+  position: fixed; /* stays across the whole screen */
+  z-index: -1;     /* behind everything */
+}
