@@ -59,7 +59,7 @@ export default function Hero() {
           <div className="hero-highlights">
 
             <div className="highlight">
-              <h4>3+</h4>
+              <h4>Real world</h4>
               <p>Projects</p>
             </div>
 
@@ -82,7 +82,7 @@ export default function Hero() {
           src="/profile.jpeg"
           alt="Aditya"
           className="hero-img"
-          initial={{ x: 90, opacity: 0 }}
+          initial={{ x: 80, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
         />

@@ -580,17 +580,11 @@ transform:translateY(10px);
 
 }
 .hero-container{
-
 display:flex;
-
 align-items:center;
-
 justify-content:space-between;
-
 padding:0 100px;
-
-gap:80px;
-
+width:100%;
 }
 .hero-highlights{
 
