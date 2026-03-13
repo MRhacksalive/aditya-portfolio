@@ -9,7 +9,7 @@ const skills = [
 { name:"SQL", img:"/logos/sql.png"},
 { name:"C", img:"/logos/c.png"},
 { name:"Java", img:"/logos/java.png"},
-{ name:"PostgreSQL", img:"/logos/postgres.jpeg"},
+{ name:"PostgreSQL", img:"/logos/postgress.jpeg"},
 { name:"Express", img:"/logos/express.png"},
 { name:"NumPy", img:"/logos/numpy.png"},
 { name:"Pandas", img:"/logos/pandas.png"},
