@@ -10,9 +10,9 @@ export default function About() {
         BTech in Computer & Communication Engineering at
         Manipal Institute of Technology. Interested in
         machine learning, data analysis, and software development.
-        Focused on leveraging technology to solve real-world problems and create impactful solutions.
+        Focused on solving real-world problems and creating impactful solutions.
         Always eager to learn and grow in the field of technology.
-        
+                                                                                  
         Love football and music. GGMU
       </p>
 
