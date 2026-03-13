@@ -38,8 +38,8 @@ export default function Hero() {
           <div className="hero-highlights">
 
             <div className="highlight">
-              <h4>Real world</h4>
-              <p>Projects</p>
+              <h4>DA</h4>
+              <p>Data Analysis</p>
             </div>
 
             <div className="highlight">
