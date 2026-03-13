@@ -13,6 +13,18 @@ export default function About() {
         software development.
       </p>
 
+      <br/>
+
+      <a
+href="/resume.pdf"
+target="_blank"
+rel="noopener noreferrer"
+className="card"
+style={{display:"inline-block"}}
+>
+View Resume
+</a>
+
     </SectionWrapper>
   );
 }

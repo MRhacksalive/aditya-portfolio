@@ -15,17 +15,31 @@ className="profile-img"
 
 <h2>Contact</h2>
 
-<p>Email: adityakroy123@gmail.com</p>
+<p>
+Email: 
+<a href="mailto:adityakroy123@gmail.com">
+adityakroy123@gmail.com
+</a>
+</p>
+
 <p>Phone: +91-9885173701</p>
 
 <p>
-<a href="https://github.com/mrhacksalive" target="_blank">
+<a
+href="https://github.com/mrhacksalive"
+target="_blank"
+rel="noopener noreferrer"
+>
 GitHub
 </a>
 </p>
 
 <p>
-<a href="https://www.instagram.com/adityaa__roy/" target="_blank">
+<a
+href="https://www.instagram.com/adityaa__roy/"
+target="_blank"
+rel="noopener noreferrer"
+>
 Instagram
 </a>
 </p>
