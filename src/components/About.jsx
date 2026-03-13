@@ -12,6 +12,7 @@ export default function About() {
         machine learning, data analysis, and software development.
         Focused on leveraging technology to solve real-world problems and create impactful solutions.
         Always eager to learn and grow in the field of technology.
+        
         Love football and music. GGMU
       </p>
 
