@@ -19,7 +19,7 @@ export default function About() {
       <br/>
 
       <a
-href="/resume.pdf"
+href="/resume1.pdf"
 target="_blank"
 rel="noopener noreferrer"
 className="card"
