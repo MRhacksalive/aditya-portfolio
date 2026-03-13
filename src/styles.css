@@ -170,16 +170,20 @@ line-height:1.6;
 }
 
 .hero-img{
+
 width:260px;
 height:260px;
+
 border-radius:50%;
+
 object-fit:cover;
 
 border:3px solid #ff1e1e;
 
 box-shadow:0 0 40px rgba(255,0,0,0.6);
 
-transition:0.4s;
+margin-left:auto;
+
 }
 
 .hero-img:hover{
@@ -585,7 +589,7 @@ justify-content:space-between;
 
 padding:0 100px;
 
-gap:60px;
+gap:80px;
 
 }
 .hero-highlights{
@@ -628,6 +632,8 @@ transform:translateY(-4px);
 
 }.hero-text{
 
-max-width:520px;
+flex:1;
+
+max-width:550px;
 
 }
