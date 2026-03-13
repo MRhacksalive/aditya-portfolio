@@ -16,9 +16,9 @@ className="profile-img"
 <h2>Contact</h2>
 
 <p>
-Email: 
+Email:  
 <a href="mailto:adityakroy123@gmail.com">
-adityakroy123@gmail.com
+ adityakroy123@gmail.com
 </a>
 </p>
 
