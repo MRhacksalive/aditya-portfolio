@@ -13,7 +13,7 @@ export default function Hero() {
       >
         <h1>Aditya Kishore Roy</h1>
 
-        <h3>
+        <h3 className="hero-role">
           <TypeAnimation
             sequence={[
               "Software Intern", 2000,
@@ -53,6 +53,31 @@ export default function Hero() {
 
         </div>
 
+        {/* NEW SECTION */}
+        <div className="hero-highlights">
+
+          <div className="highlight">
+            <h4>3+</h4>
+            <p>Projects</p>
+          </div>
+
+          <div className="highlight">
+            <h4>ML</h4>
+            <p>Machine Learning</p>
+          </div>
+
+          <div className="highlight">
+            <h4>FS</h4>
+            <p>Full Stack</p>
+          </div>
+
+          <div className="highlight">
+            <h4>MIT</h4>
+            <p>Manipal</p>
+          </div>
+
+        </div>
+
       </motion.div>
 
       <motion.img
@@ -64,12 +89,9 @@ export default function Hero() {
         transition={{ duration: 1 }}
       />
 
-      <div className="floating-tech">
-        <span>⚛️</span>
-        <span>🐍</span>
-        <span>📊</span>
-        <span>💻</span>
-        <span>🧠</span>
+      {/* Scroll Indicator */}
+      <div className="scroll-indicator">
+        <span></span>
       </div>
 
     </section>
