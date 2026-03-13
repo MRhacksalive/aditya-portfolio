@@ -50,7 +50,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/aditya-roy-10ad9819/"
               target="_blank"
               rel="noopener noreferrer"
             >
