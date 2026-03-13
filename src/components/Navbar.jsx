@@ -3,7 +3,7 @@ return(
 
 <nav className="navbar">
 
-<h2>Aditya Roy</h2>
+<h2>AKR</h2>
 
 <div>
 
