@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Hero() {
   return (
@@ -13,6 +14,10 @@ export default function Hero() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
         >
+
+          {/* Greeting */}
+          <p className="hero-greeting">Hi, I am</p>
+
           <h1>Aditya Kishore Roy</h1>
 
           <h3 className="hero-role">
@@ -28,35 +33,41 @@ export default function Hero() {
             />
           </h3>
 
-          <p>
+          <p className="hero-desc">
             Passionate about technology, machine learning,
             data visualization and full-stack development.
           </p>
 
+          {/* Social icons */}
+          <div className="hero-socials">
 
-          {/* Highlights BELOW buttons */}
-          <div className="hero-highlights">
+            <a
+              href="https://github.com/mrhacksalive"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub />
+            </a>
 
-            <div className="highlight">
-              <h4>DA</h4>
-              <p>Data Analysis</p>
-            </div>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin />
+            </a>
 
-            <div className="highlight">
-              <h4>ML</h4>
-              <p>Machine Learning</p>
-            </div>
-
-            <div className="highlight">
-              <h4>FS</h4>
-              <p>Full Stack</p>
-            </div>
+            <a
+              href="mailto:adityakroy123@gmail.com"
+            >
+              <FaEnvelope />
+            </a>
 
           </div>
 
         </motion.div>
 
-        {/* PROFILE IMAGE */}
+        {/* Profile image */}
         <motion.img
           src="/profile.jpeg"
           alt="Aditya"
