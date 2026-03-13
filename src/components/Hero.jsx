@@ -33,27 +33,6 @@ export default function Hero() {
             data visualization and full-stack development.
           </p>
 
-          <div className="hero-buttons">
-
-            <a
-              href="https://github.com/mrhacksalive"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hero-btn"
-            >
-              GitHub
-            </a>
-
-            <a
-              href="/resume1.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hero-btn-outline"
-            >
-              Resume
-            </a>
-
-          </div>
 
           {/* Highlights BELOW buttons */}
           <div className="hero-highlights">

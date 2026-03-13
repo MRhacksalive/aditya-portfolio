@@ -182,7 +182,8 @@ border:3px solid #ff1e1e;
 
 box-shadow:0 0 40px rgba(255,0,0,0.6);
 
-margin-left:auto;
+/* move image up */
+transform:translateY(-40px);
 
 }
 
