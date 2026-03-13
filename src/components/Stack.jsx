@@ -1,9 +1,6 @@
-import { useState } from "react";
 import SectionWrapper from "./SectionWrapper";
 
 export default function Stack() {
-
-const [logo,setLogo] = useState(null);
 
 const skills = [
 { name:"Python", img:"/logos/python.png"},
@@ -33,21 +30,20 @@ return(
 <div className="stack-grid">
 
 {skills.map((skill)=>(
-<div
-className="stack-item"
-onClick={()=>setLogo(skill.img)}
->
-{skill.name}
+<div className="stack-item" key={skill.name}>
+
+<span className="stack-name">{skill.name}</span>
+
+<img
+src={skill.img}
+alt={skill.name}
+className="stack-logo"
+/>
+
 </div>
 ))}
 
 </div>
-
-{logo && (
-<div style={{marginTop:"40px",textAlign:"center"}}>
-<img src={logo} style={{width:"120px"}}/>
-</div>
-)}
 
 </SectionWrapper>
 

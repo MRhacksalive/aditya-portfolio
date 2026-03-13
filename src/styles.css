@@ -383,3 +383,40 @@ grid-template-columns:repeat(2,1fr);
 }
 
 }
+/* ================= STACK HOVER LOGO ================= */
+
+.stack-item{
+position:relative;
+overflow:hidden;
+cursor:pointer;
+}
+
+.stack-logo{
+
+position:absolute;
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%) scale(0.5);
+
+width:60px;
+
+opacity:0;
+
+transition:0.35s;
+}
+
+.stack-name{
+transition:0.35s;
+}
+
+/* hover effect */
+
+.stack-item:hover .stack-name{
+opacity:0;
+}
+
+.stack-item:hover .stack-logo{
+opacity:1;
+transform:translate(-50%,-50%) scale(1);
+}
