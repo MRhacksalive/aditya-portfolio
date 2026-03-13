@@ -575,3 +575,53 @@ transform:translateY(10px);
 }
 
 }
+.hero-container{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:0 100px;
+
+}
+.hero-highlights{
+
+display:flex;
+
+gap:35px;
+
+margin-top:30px;
+
+}
+
+.highlight{
+
+text-align:left;
+
+transition:0.3s;
+
+}
+
+.highlight h4{
+
+color:#ff1e1e;
+
+font-size:22px;
+
+}
+
+.highlight p{
+
+color:#aaa;
+
+font-size:13px;
+
+}
+
+.highlight:hover{
+
+transform:translateY(-4px);
+
+}
