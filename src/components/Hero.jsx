@@ -16,7 +16,7 @@ export default function Hero() {
         >
 
           {/* Greeting */}
-          <p className="hero-greeting">Hi, I am</p>
+          <p className="hero-greeting">Hi there, I am</p>
 
           <h1>Aditya Kishore Roy</h1>
 
