@@ -43,6 +43,15 @@ rel="noopener noreferrer"
 Instagram
 </a>
 </p>
+<p>
+<a
+href="https://www.linkedin.com/in/aditya-roy-10ad9819/"
+target="_blank"
+rel="noopener noreferrer"
+>
+LinkedIn
+</a>
+</p>
 
 </div>
 
