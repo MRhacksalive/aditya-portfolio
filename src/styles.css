@@ -579,11 +579,13 @@ transform:translateY(10px);
 
 display:flex;
 
-justify-content:space-between;
-
 align-items:center;
 
+justify-content:space-between;
+
 padding:0 100px;
+
+gap:60px;
 
 }
 .hero-highlights{
@@ -623,5 +625,9 @@ font-size:13px;
 .highlight:hover{
 
 transform:translateY(-4px);
+
+}.hero-text{
+
+max-width:520px;
 
 }
