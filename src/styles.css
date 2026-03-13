@@ -456,8 +456,9 @@ color:black;
 .floating-tech{
 
 position:absolute;
-left:45%;
-top:45%;
+
+left:40%;
+top:60%;
 
 display:flex;
 gap:25px;
@@ -469,11 +470,14 @@ opacity:0.25;
 animation:floatTech 10s ease-in-out infinite;
 
 }
-
 @keyframes floatTech{
 
 0%{transform:translateY(0px)}
 50%{transform:translateY(-20px)}
 100%{transform:translateY(0px)}
 
+}
+.hero-role span{
+color:#ff1e1e;
+font-weight:500;
 }

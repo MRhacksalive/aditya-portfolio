@@ -43,7 +43,7 @@ export default function Hero() {
           </a>
 
           <a
-            href="/resume.pdf"
+            href="/resume1.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="hero-btn-outline"
