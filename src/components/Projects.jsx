@@ -11,7 +11,7 @@ return(
 <div className="project-grid">
 
 <a
-href="https://github.com/MRhacksalive/course_alloc"
+href="https://github.com/MRhacksalive/Course-Allocator"
 target="_blank"
 rel="noopener noreferrer"
 className="card"
