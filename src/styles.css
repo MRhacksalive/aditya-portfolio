@@ -19,16 +19,41 @@ overflow-x:hidden;
 
 /* ================= ANIMATED BACKGROUND ================= */
 
+/* ================= ANIMATED BACKGROUND ================= */
+
 body{
-background:linear-gradient(-45deg,#0a0a0a,#1a0000,#330000,#0a0a0a);
-background-size:400% 400%;
-animation:backgroundFlow 12s ease infinite;
+font-family:"Poppins",sans-serif;
+color:white;
+overflow-x:hidden;
+
+background:linear-gradient(
+-60deg,
+#050505 0%,
+#050505 40%,
+#1a0000 50%,
+#050505 60%,
+#050505 100%
+);
+
+background-size:300% 300%;
+
+animation:backgroundFlow 10s ease-in-out infinite;
 }
 
 @keyframes backgroundFlow{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
 }
 
 /* ================= GRID BACKGROUND ================= */
