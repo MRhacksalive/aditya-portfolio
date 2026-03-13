@@ -57,7 +57,7 @@ className="card"
 >
 <h3>Stock Trading Platform</h3>
 
-<p>Security Audits • Trading System</p>
+<p>Python • JavaScript</p>
 
 <p>
 Simulated stock trading environment where users can buy
