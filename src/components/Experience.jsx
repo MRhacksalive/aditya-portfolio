@@ -23,6 +23,7 @@ through visualization and feature extraction</li>
 
 <div className="card">
 <h3>Mars Rover Manipal</h3>
+<p>Member</p>
 <ul>
 <li>Conducted data-driven analysis on sensor-actuator systems, emphasizing predictive
 modeling for hardware-software integration.</li>
