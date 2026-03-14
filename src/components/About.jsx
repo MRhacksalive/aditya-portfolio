@@ -78,7 +78,7 @@ viewport={{once:true}}
 >
 <FaCode />
 <h3>Data Analysis</h3>
-<p> Visualize complex datasets and perform data manipulation and analysis.</p>
+<p> Visualizing complex datasets and performing data manipulation and analysis.</p>
 </motion.div>
 
 </div>
