@@ -64,7 +64,7 @@ viewport={{once:true}}
 >
 <FaBrain />
 <h3>Machine Learning</h3>
-<p>Exploring models, data analysis and intelligent systems.</p>
+<p>Exploring models, algorithms and intelligent systems.</p>
 </motion.div>
 
 
