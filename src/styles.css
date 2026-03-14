@@ -1081,3 +1081,80 @@ transform:translateY(-50%) rotate(-45deg);
 opacity:1;
 
 }
+/* ================= MOBILE FIX ================= */
+
+@media (max-width: 768px){
+
+/* general section spacing */
+
+section{
+padding:80px 25px;
+}
+
+/* HERO */
+
+.hero-container{
+flex-direction:column;
+text-align:center;
+gap:40px;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero-img{
+width:180px;
+height:180px;
+margin-top:0;
+}
+
+/* ABOUT TEXT */
+
+.about-text{
+font-size:15px;
+line-height:1.7;
+max-width:100%;
+}
+
+/* ABOUT CARDS */
+
+.about-grid{
+grid-template-columns:1fr;
+gap:25px;
+}
+
+.about-card{
+width:100%;
+}
+
+/* PROJECTS */
+
+.project-list{
+grid-template-columns:1fr;
+gap:25px;
+}
+
+/* STACK */
+
+.stack-grid{
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+}
+
+/* CONTACT */
+
+.contact-links{
+flex-direction:column;
+gap:20px;
+}
+
+}
+.hero-img{
+max-width:100%;
+height:auto;
+}
+.resume-btn{
+display:block;
+margin:30px auto;
+}
