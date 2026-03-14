@@ -1044,3 +1044,40 @@ height:100%;
 z-index:-1;
 
 }
+.project-card{
+
+position:relative;
+cursor:pointer;
+
+}
+
+/* arrow */
+
+.project-arrow{
+
+position:absolute;
+
+right:25px;
+top:30%;
+
+font-size:22px;
+
+color:#ff1e1e;
+
+transform:translateY(-50%) rotate(0deg);
+
+transition:0.35s ease;
+
+opacity:.8;
+
+}
+
+/* rotate on hover */
+
+.project-card:hover .project-arrow{
+
+transform:translateY(-50%) rotate(-45deg);
+
+opacity:1;
+
+}

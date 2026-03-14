@@ -1,12 +1,12 @@
 import { useState } from "react";
 import SectionWrapper from "./SectionWrapper";
+import { FiArrowRight } from "react-icons/fi";
 
 export default function Projects(){
 
 const [activeProject,setActiveProject] = useState(null);
 
 const projects = [
-
 {
 title:"Dynamic Course Allocator",
 stack:"React • Express • PostgreSQL",
@@ -19,7 +19,6 @@ Built application approval workflows and dynamic course allocation logic.
 `,
 github:"https://github.com/MRhacksalive/Course-Allocator"
 },
-
 {
 title:"Hospital Management System",
 stack:"Java • JavaFX",
@@ -32,7 +31,6 @@ Handled CRUD operations for hospital data management.
 `,
 github:"https://github.com/MRhacksalive/Hospital-Management-System"
 },
-
 {
 title:"Stock Trading Platform",
 stack:"Python • JavaScript",
@@ -45,7 +43,6 @@ Used Python for trading logic and JavaScript for UI interactions.
 `,
 github:"https://github.com/MRhacksalive/Stock-Trading-platform-with-Security-assesments"
 }
-
 ];
 
 return(
@@ -57,6 +54,7 @@ return(
 <div className="project-list">
 
 {projects.map((project,index)=>(
+
 <div
 key={index}
 className="project-card"
@@ -67,7 +65,11 @@ onClick={()=>setActiveProject(project)}
 <p className="stack">{project.stack}</p>
 <p className="short">{project.short}</p>
 
+{/* arrow */}
+<FiArrowRight className="project-arrow"/>
+
 </div>
+
 ))}
 
 </div>
@@ -76,40 +78,38 @@ onClick={()=>setActiveProject(project)}
 {/* Modal */}
 
 {activeProject && (
-  <div className="project-modal" onClick={()=>setActiveProject(null)}>
+<div className="project-modal" onClick={()=>setActiveProject(null)}>
 
-    <div
-      className="modal-content"
-      onClick={(e)=>e.stopPropagation()}
-    >
+<div
+className="modal-content"
+onClick={(e)=>e.stopPropagation()}
+>
 
-      <button
-        className="close-btn"
-        onClick={()=>setActiveProject(null)}
-      >
-        ×
-      </button>
+<button
+className="close-btn"
+onClick={()=>setActiveProject(null)}
+>
+×
+</button>
 
-      <h3>{activeProject.title}</h3>
+<h3>{activeProject.title}</h3>
 
-      
+<p className="description">
+{activeProject.description}
+</p>
 
-      <p className="description">
-        {activeProject.description}
-      </p>
+<a
+href={activeProject.github}
+target="_blank"
+rel="noopener noreferrer"
+className="github-btn"
+>
+View on GitHub
+</a>
 
-      <a
-        href={activeProject.github}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="github-btn"
-      >
-        View on GitHub
-      </a>
+</div>
 
-    </div>
-
-  </div>
+</div>
 )}
 
 </SectionWrapper>
