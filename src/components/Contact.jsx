@@ -1,4 +1,5 @@
 import SectionWrapper from "./SectionWrapper";
+import { FaGithub, FaInstagram, FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa";
 
 export default function Contact(){
 
@@ -15,43 +16,49 @@ className="profile-img"
 
 <h2>Contact</h2>
 
-<p>
-Email:  
+<div className="contact-info">
+
+<div className="contact-item">
+<FaEnvelope />
 <a href="mailto:adityakroy123@gmail.com">
- adityakroy123@gmail.com
+adityakroy123@gmail.com
 </a>
-</p>
+</div>
 
-<p>Phone: +91-9885173701</p>
+<div className="contact-item">
+<FaPhone />
+<span>+91-9885173701</span>
+</div>
 
-<p>
+</div>
+
+<div className="contact-socials">
+
 <a
 href="https://github.com/mrhacksalive"
 target="_blank"
 rel="noopener noreferrer"
 >
-GitHub
+<FaGithub />
 </a>
-</p>
 
-<p>
 <a
 href="https://www.instagram.com/adityaa__roy/"
 target="_blank"
 rel="noopener noreferrer"
 >
-Instagram
+<FaInstagram />
 </a>
-</p>
-<p>
+
 <a
 href="https://www.linkedin.com/in/aditya-roy-10ad9819/"
 target="_blank"
 rel="noopener noreferrer"
 >
-LinkedIn
+<FaLinkedin />
 </a>
-</p>
+
+</div>
 
 </div>
 

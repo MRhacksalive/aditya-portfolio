@@ -8,7 +8,7 @@ return(
 
 <h2>Experience</h2>
 
-<div className="card">
+<div className="experience-card">
 <h3>Zemoso Technologies</h3>
 <p>Software Intern</p>
 <ul>
@@ -21,7 +21,7 @@ through visualization and feature extraction</li>
 </ul>
 </div>
 
-<div className="card">
+<div className="experience-card">
 <h3>Mars Rover Manipal</h3>
 <p>Member</p>
 <ul>
