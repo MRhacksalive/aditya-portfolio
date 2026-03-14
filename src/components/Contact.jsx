@@ -27,10 +27,9 @@ adityakroy123@gmail.com
 
 <div className="contact-item">
 <FaPhone />
-<a href="tel:+91-9885173701">Call +91-9885173701</a>
-<span>+91-9885173701</span>
+<a href="tel:+91-9885173701"><span>+91-9885173701</span></a>
 </div>
-
+3
 </div>
 
 <div className="contact-socials">
