@@ -100,7 +100,8 @@ viewport={{once:true}}
 >
 <FaFutbol />
 <h3>Football</h3>
-<p>Passionate about sports and teamwork.</p>
+<p>Passionate about sports<p>
+</p>  and teamwork.</p>
 </motion.div>
 
 
@@ -114,7 +115,8 @@ viewport={{once:true}}
 >
 <FaMusic />
 <h3>Music</h3>
-<p>Enjoy exploring different genres and creativity.</p>
+<p>Enjoy exploring different genres <p>
+</p> and creativity.</p>
 </motion.div>
 
 </div>

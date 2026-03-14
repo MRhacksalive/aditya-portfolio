@@ -11,7 +11,7 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:"Poppins",sans-serif;
+font-family:"Inter",sans-serif;
 color:white;
 overflow-x:hidden;
 
@@ -389,7 +389,7 @@ cursor:pointer;
 
 .stack-item:hover{
 
-background:white;
+background:#ffffff;
 
 border:1px solid #ff1e1e;
 
@@ -849,7 +849,7 @@ width: 100%;
 
 line-height:1.7;
 
-color:#ccc;
+color:#9c9c9c;
 
 font-size:18px;
 
@@ -904,20 +904,16 @@ flex-wrap:wrap;
 /* cards */
 
 .about-card{
+width:300px;
+height:200px;
 
-background:#0b0b0b;
-
-border:1px solid #1f1f1f;
-
-padding:30px;
-
-border-radius:14px;
-
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
 text-align:center;
-
-transition:.35s;
-
 }
+
 
 .about-card svg{
 
@@ -956,13 +952,14 @@ background:#111;
 
 border:1px solid #1f1f1f;
 
-padding:30px;
+padding:40px;
 
 margin-top:25px;
 
 border-radius:12px;
 
 transition:0.35s;
+
 
 }
 .experience-card:hover{
