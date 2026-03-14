@@ -877,11 +877,13 @@ color:#ff1e1e;
 
 display:grid;
 
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:repeat(3, 280px);
 
-gap:35px;
+justify-content:center;
 
-margin-top:20px;
+gap:40px;
+
+margin-top:40px;
 
 }
 
