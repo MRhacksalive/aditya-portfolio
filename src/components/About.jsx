@@ -1,6 +1,6 @@
 import SectionWrapper from "./SectionWrapper";
 import { motion } from "framer-motion";
-import { FaCode, FaBrain, FaLaptopCode, FaFutbol, FaMusic } from "react-icons/fa";
+import {  FaCode, FaBrain, FaLaptopCode, FaFutbol, FaMusic, FaCamera } from "react-icons/fa";
 
 export default function About(){
 
@@ -36,7 +36,7 @@ View Resume
 
 {/* SKILLS */}
 
-<h3 className="about-subtitle">What I Work With</h3>
+<h3 className="about-subtitle">Skills</h3>
 
 <div className="about-grid">
 
@@ -86,7 +86,7 @@ viewport={{once:true}}
 
 {/* HOBBIES */}
 
-<h3 className="about-subtitle">Interests & Hobbies</h3>
+<h3 className="about-subtitle">Interests</h3>
 
 <div className="about-grid hobbies">
 
@@ -104,6 +104,19 @@ viewport={{once:true}}
 </p>  and teamwork.</p>
 </motion.div>
 
+<motion.div
+className="about-card"
+whileHover={{scale:1.05}}
+initial={{opacity:0,y:30}}
+whileInView={{opacity:1,y:0}}
+transition={{duration:.6}}
+viewport={{once:true}}
+>
+<FaCamera />
+<h3>Photography</h3>
+<p>Live to capture moments<p>
+</p>  and tell stories.</p>
+</motion.div>
 
 <motion.div
 className="about-card"
