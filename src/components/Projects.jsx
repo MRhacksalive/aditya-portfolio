@@ -1,3 +1,11 @@
+import { useState } from "react";
+import SectionWrapper from "./SectionWrapper";
+import { FiArrowRight } from "react-icons/fi";
+
+export default function Projects(){
+
+const [activeProject,setActiveProject] = useState(null);
+
 const projects = [
 {
 title:"Dynamic Course Allocator",
@@ -37,14 +45,85 @@ github:"https://github.com/MRhacksalive/Stock-Trading-platform-with-Security-ass
 },
 {
 title:"Flight Data Analysis & Visualization",
-stack:"Python • Pandas • Matplotlib • Seaborn",
-short:"Analyzed flight data to uncover trends in altitude, speed, and performance.",
+stack:"Node • React",
+short:"Built a full-stack flight tracking system using React and Node.js",
 description:`
-Performed exploratory data analysis on flight datasets (ADS-B / FAA / Kaggle).
-Built time-series visualizations for altitude, speed, and engine parameters.
-Identified operational trends and anomalies using statistical analysis.
-Developed dashboards and plots to summarize flight performance metrics.
+Built a full-stack flight tracking system using React and Node.js, integrating real-time aviation data APIs to monitor live aircraft movement. 
+Developed interactive map visualizations for tracking flight paths and positions, enabling intuitive exploration of flight data.
+Implemented backend services for data fetching, processing, and efficient API handling..
 `,
 github:"https://github.com/MRhacksalive/Flight-analyzer"
 }
 ];
+
+return(
+
+<SectionWrapper id="projects">
+
+<h2>Projects</h2>
+
+<div className="project-list">
+
+{projects.map((project,index)=>(
+
+<div
+key={index}
+className="project-card"
+onClick={()=>setActiveProject(project)}
+>
+
+<h3>{project.title}</h3>
+<p className="stack">{project.stack}</p>
+<p className="short">{project.short}</p>
+
+<FiArrowRight className="project-arrow"/>
+
+</div>
+
+))}
+
+</div>
+
+
+{/* Modal */}
+
+{activeProject && (
+<div className="project-modal" onClick={()=>setActiveProject(null)}>
+
+<div
+className="modal-content"
+onClick={(e)=>e.stopPropagation()}
+>
+
+<button
+className="close-btn"
+onClick={()=>setActiveProject(null)}
+>
+×
+</button>
+
+<h3>{activeProject.title}</h3>
+
+<p className="description">
+{activeProject.description}
+</p>
+
+<a
+href={activeProject.github}
+target="_blank"
+rel="noopener noreferrer"
+className="github-btn"
+>
+View on GitHub
+</a>
+
+</div>
+
+</div>
+)}
+
+</SectionWrapper>
+
+)
+
+}
