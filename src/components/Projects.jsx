@@ -46,7 +46,7 @@ github:"https://github.com/MRhacksalive/Stock-Trading-platform-with-Security-ass
 {
 title:"Flight Data Analysis & Visualization",
 stack:"Node • React",
-short:"Built a full-stack flight tracking system using React and Node.js",
+short:"A full-stack flight tracking system using React and Node.js",
 description:`
 Built a full-stack flight tracking system using React and Node.js, integrating real-time aviation data APIs to monitor live aircraft movement. 
 Developed interactive map visualizations for tracking flight paths and positions, enabling intuitive exploration of flight data.
