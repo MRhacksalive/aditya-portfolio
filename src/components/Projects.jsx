@@ -1,11 +1,3 @@
-import { useState } from "react";
-import SectionWrapper from "./SectionWrapper";
-import { FiArrowRight } from "react-icons/fi";
-
-export default function Projects(){
-
-const [activeProject,setActiveProject] = useState(null);
-
 const projects = [
 {
 title:"Dynamic Course Allocator",
@@ -42,78 +34,17 @@ Built analysis modules to evaluate trading security vulnerabilities.
 Used Python for trading logic and JavaScript for UI interactions.
 `,
 github:"https://github.com/MRhacksalive/Stock-Trading-platform-with-Security-assesments"
+},
+{
+title:"Flight Data Analysis & Visualization",
+stack:"Python • Pandas • Matplotlib • Seaborn",
+short:"Analyzed flight data to uncover trends in altitude, speed, and performance.",
+description:`
+Performed exploratory data analysis on flight datasets (ADS-B / FAA / Kaggle).
+Built time-series visualizations for altitude, speed, and engine parameters.
+Identified operational trends and anomalies using statistical analysis.
+Developed dashboards and plots to summarize flight performance metrics.
+`,
+github:"https://github.com/MRhacksalive/Flight-analyzer"
 }
 ];
-
-return(
-
-<SectionWrapper id="projects">
-
-<h2>Projects</h2>
-
-<div className="project-list">
-
-{projects.map((project,index)=>(
-
-<div
-key={index}
-className="project-card"
-onClick={()=>setActiveProject(project)}
->
-
-<h3>{project.title}</h3>
-<p className="stack">{project.stack}</p>
-<p className="short">{project.short}</p>
-
-{/* arrow */}
-<FiArrowRight className="project-arrow"/>
-
-</div>
-
-))}
-
-</div>
-
-
-{/* Modal */}
-
-{activeProject && (
-<div className="project-modal" onClick={()=>setActiveProject(null)}>
-
-<div
-className="modal-content"
-onClick={(e)=>e.stopPropagation()}
->
-
-<button
-className="close-btn"
-onClick={()=>setActiveProject(null)}
->
-×
-</button>
-
-<h3>{activeProject.title}</h3>
-
-<p className="description">
-{activeProject.description}
-</p>
-
-<a
-href={activeProject.github}
-target="_blank"
-rel="noopener noreferrer"
-className="github-btn"
->
-View on GitHub
-</a>
-
-</div>
-
-</div>
-)}
-
-</SectionWrapper>
-
-)
-
-}
