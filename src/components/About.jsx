@@ -48,9 +48,9 @@ whileInView={{opacity:1,y:0}}
 transition={{duration:.6}}
 viewport={{once:true}}
 >
-<FaLaptopCode />
-<h3>Full Stack</h3>
-<p>Building scalable web applications and backend systems.</p>
+<FaBrain />
+<h3>Business Analysis</h3>
+<p>Optimizing processes, analyzing data, and solving real-world business problems.</p>
 </motion.div>
 
 
@@ -62,7 +62,7 @@ whileInView={{opacity:1,y:0}}
 transition={{duration:.6,delay:.1}}
 viewport={{once:true}}
 >
-<FaBrain />
+<FaLaptopCode />
 <h3>Machine Learning</h3>
 <p>Exploring models, algorithms and intelligent systems.</p>
 </motion.div>

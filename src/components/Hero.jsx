@@ -23,7 +23,7 @@ export default function Hero() {
           <h3 className="hero-role">
             <TypeAnimation
               sequence={[
-                "Business Analysis Intern at Porter", 2000,
+                "Business Intern at Porter", 2000,
                 "Machine Learning Enthusiast", 2000,
                 "Data Analyst", 2000
               ]}
