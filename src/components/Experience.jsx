@@ -9,6 +9,16 @@ return(
 <h2>Experience</h2>
 
 <div className="experience-card">
+  <h3>Porter</h3>
+  <p>Business Intern</p>
+  <ul>
+    <li>Analyzed operational data to identify process inefficiencies and support data-driven decision-making.</li>
+    <li>Collaborated with cross-functional teams to improve business workflows and optimize operational performance.</li>
+    <li>Built reports and dashboards to track key performance metrics and provide actionable business insights.</li>
+  </ul>
+</div>
+
+<div className="experience-card">
 <h3>Zemoso Technologies</h3>
 <p>Software Intern</p>
 <ul>
