@@ -23,9 +23,6 @@ export default function Hero() {
           <h3 className="hero-role">
             <TypeAnimation
               sequence={[
-                "Business Analysis Intern at Porter", 2000,
-                "Business Analysis Intern at Porter", 2000,
-                "Business Analysis Intern at Porter", 2000,
                 "Business Analysis Intern at Porter", 2000
               ]}
               speed={50}
@@ -34,8 +31,7 @@ export default function Hero() {
           </h3>
 
           <p className="hero-desc">
-            Passionate about technology, machine learning,
-            data visualization and full-stack development.
+            Passionate about technology.
           </p>
 
           {/* Social icons */}
