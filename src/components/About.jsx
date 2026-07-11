@@ -22,7 +22,7 @@ viewport={{once:true}}
 BTech in Computer & Communication Engineering at Manipal Institute of Technology.
 Interested in machine learning, data analysis, and software development.
 Focused on solving real-world problems and building impactful solutions.
-Always eager to learn and explore new technologies. whatcha doin
+Always eager to learn and explore new technologies.
 </motion.p>
 <a
 href="/resume1.pdf"
