@@ -1169,3 +1169,14 @@ margin:30px auto;
   margin: 0 auto;
   text-align: center;
 }
+.navbar-logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.navbar-logo-link {
+  display: flex;
+  align-items: center;
+}
