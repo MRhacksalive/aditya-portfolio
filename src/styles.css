@@ -1179,4 +1179,5 @@ margin:30px auto;
 .navbar-logo-link {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
