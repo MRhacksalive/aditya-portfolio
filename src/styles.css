@@ -1443,23 +1443,38 @@ margin:30px auto;
   }
 }
 
-/* Touchscreen devices: don't rely on hover for stack cards */
+/* ================= MOBILE STACK TAP ================= */
+
 @media (hover: none) and (max-width: 768px) {
 
-  .stack-item:hover {
-    background: #111;
-    border-color: #1f1f1f;
-    transform: none;
-    box-shadow: none;
+  .stack-item {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
   }
 
-  .stack-item:hover .stack-name {
-    opacity: 1;
+  /* Tap/press card -> show logo */
+  .stack-item:hover,
+  .stack-item:active,
+  .stack-item:focus,
+  .stack-item:focus-within {
+    background: #ffffff;
+    border-color: #ff1e1e;
+    box-shadow: 0 8px 25px rgba(255, 0, 0, 0.35);
   }
 
-  .stack-item:hover .stack-logo {
+  .stack-item:hover .stack-name,
+  .stack-item:active .stack-name,
+  .stack-item:focus .stack-name,
+  .stack-item:focus-within .stack-name {
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.5);
+  }
+
+  .stack-item:hover .stack-logo,
+  .stack-item:active .stack-logo,
+  .stack-item:focus .stack-logo,
+  .stack-item:focus-within .stack-logo {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
   }
 }
 
