@@ -1,145 +1,61 @@
 import SectionWrapper from "./SectionWrapper";
-import { motion } from "framer-motion";
-import {  FaCode, FaBrain, FaLaptopCode, FaFutbol, FaMusic, FaCamera } from "react-icons/fa";
+import { FaCode, FaBrain, FaLaptopCode, FaFutbol, FaMusic, FaCamera } from "react-icons/fa";
 
-export default function About(){
+const skills = [
+  { Icon: FaBrain, title: "Business Analysis", text: "Optimizing processes, analyzing data, and solving real-world business problems." },
+  { Icon: FaLaptopCode, title: "Machine Learning", text: "Exploring models, algorithms and intelligent systems." },
+  { Icon: FaCode, title: "Data Analysis", text: "Visualizing datasets and performing data manipulation and analysis." },
+];
 
-return(
+const interests = [
+  { Icon: FaFutbol, title: "Football", text: "Passionate about sports and teamwork." },
+  { Icon: FaCamera, title: "Photography", text: "Live to capture moments and tell stories." },
+  { Icon: FaMusic, title: "Music", text: "Enjoy exploring different genres and creativity." },
+];
 
-<SectionWrapper id="about">
+export default function About() {
+  return (
+    <SectionWrapper id="about" title="About" note="Manipal Institute of Technology">
+      <div className="about-top">
+        <p className="lede">
+          Focused on solving real-world problems and building impactful solutions.
+        </p>
 
-<div className="about-container">
+        <div className="about-side">
+          <div className="prose">
+            <p>
+              BTech in Computer &amp; Communication Engineering at Manipal Institute of Technology.
+              Interested in machine learning, data analysis, and software development.
+            </p>
+            <p>Always eager to learn and explore new technologies.</p>
+          </div>
+          <a href="/resume1.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-solid">
+            View resume
+          </a>
+        </div>
+      </div>
 
-<h2>About</h2>
+      <h3 className="sub">Skills</h3>
+      <ul className="cols">
+        {skills.map(({ Icon, title, text }) => (
+          <li key={title} className="col col-red">
+            <Icon className="col-icon" aria-hidden="true" />
+            <h4>{title}</h4>
+            <p>{text}</p>
+          </li>
+        ))}
+      </ul>
 
-<motion.p
-className="about-text"
-initial={{opacity:0,y:20}}
-whileInView={{opacity:1,y:0}}
-transition={{duration:.7}}
-viewport={{once:true}}
->
-BTech in Computer & Communication Engineering at Manipal Institute of Technology.
-Interested in machine learning, data analysis, and software development.
-Focused on solving real-world problems and building impactful solutions.
-Always eager to learn and explore new technologies.
-</motion.p>
-<a
-href="/resume1.pdf"
-target="_blank"
-rel="noopener noreferrer"
-className="resume-btn"
->
-View Resume
-</a>
-
-
-{/* SKILLS */}
-
-<h3 className="about-subtitle">Skills</h3>
-
-<div className="about-grid">
-
-<motion.div
-className="about-card"
-whileHover={{scale:1.05}}
-initial={{opacity:0,y:30}}
-whileInView={{opacity:1,y:0}}
-transition={{duration:.6}}
-viewport={{once:true}}
->
-<FaBrain />
-<h3>Business Analysis</h3>
-<p>Optimizing processes, analyzing data, and solving real-world business problems.</p>
-</motion.div>
-
-
-<motion.div
-className="about-card"
-whileHover={{scale:1.05}}
-initial={{opacity:0,y:30}}
-whileInView={{opacity:1,y:0}}
-transition={{duration:.6,delay:.1}}
-viewport={{once:true}}
->
-<FaLaptopCode />
-<h3>Machine Learning</h3>
-<p>Exploring models, algorithms and intelligent systems.</p>
-</motion.div>
-
-
-<motion.div
-className="about-card"
-whileHover={{scale:1.05}}
-initial={{opacity:0,y:30}}
-whileInView={{opacity:1,y:0}}
-transition={{duration:.6,delay:.2}}
-viewport={{once:true}}
->
-<FaCode />
-<h3>Data Analysis</h3>
-<p> Visualizing datasets and performing data manipulation and analysis.</p>
-</motion.div>
-
-</div>
-
-
-{/* HOBBIES */}
-
-<h3 className="about-subtitle">Interests</h3>
-
-<div className="about-grid hobbies">
-
-<motion.div
-className="about-card"
-whileHover={{scale:1.05}}
-initial={{opacity:0,y:30}}
-whileInView={{opacity:1,y:0}}
-transition={{duration:.6}}
-viewport={{once:true}}
->
-<FaFutbol />
-<h3>Football</h3>
-<p>Passionate about sports<p>
-</p>  and teamwork.</p>
-</motion.div>
-
-<motion.div
-className="about-card"
-whileHover={{scale:1.05}}
-initial={{opacity:0,y:30}}
-whileInView={{opacity:1,y:0}}
-transition={{duration:.6}}
-viewport={{once:true}}
->
-<FaCamera />
-<h3>Photography</h3>
-<p>Live to capture moments<p>
-</p>  and tell stories.</p>
-</motion.div>
-
-<motion.div
-className="about-card"
-whileHover={{scale:1.05}}
-initial={{opacity:0,y:30}}
-whileInView={{opacity:1,y:0}}
-transition={{duration:.6,delay:.1}}
-viewport={{once:true}}
->
-<FaMusic />
-<h3>Music</h3>
-<p>Enjoy exploring different genres <p>
-</p> and creativity.</p>
-</motion.div>
-
-</div>
-
-
-
-</div>
-
-</SectionWrapper>
-
-)
-
+      <h3 className="sub">Interests</h3>
+      <ul className="cols">
+        {interests.map(({ Icon, title, text }) => (
+          <li key={title} className="col">
+            <Icon className="col-icon" aria-hidden="true" />
+            <h4>{title}</h4>
+            <p>{text}</p>
+          </li>
+        ))}
+      </ul>
+    </SectionWrapper>
+  );
 }

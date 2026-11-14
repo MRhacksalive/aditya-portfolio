@@ -1,15 +1,13 @@
-import { motion } from "framer-motion";
-
-export default function SectionWrapper({ children, id }) {
+export default function SectionWrapper({ id, title, note, children }) {
   return (
-    <motion.section
-      id={id}
-      initial={{ opacity: 0, y: 80 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true }}
-    >
-      {children}
-    </motion.section>
+    <section id={id} className="sec">
+      <div className="wrap sec-grid">
+        <header className="sec-head">
+          <h2>{title}</h2>
+          {note && <p>{note}</p>}
+        </header>
+        <div className="sec-body">{children}</div>
+      </div>
+    </section>
   );
 }
