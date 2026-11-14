@@ -55,20 +55,16 @@ export default function Hero() {
         </figure>
       </div>
 
-      <ul className="hero-facts rise" style={{ "--d": "1s" }}>
-        <li>
-          <strong>Computer &amp; Communication Engineering</strong>
-          <span>Manipal Institute of Technology</span>
-        </li>
-        <li>
-          <strong>Business Intern</strong>
-          <span>Porter</span>
-        </li>
-        <li>
-          <strong>Member</strong>
-          <span>Mars Rover Manipal</span>
-        </li>
-      </ul>
+     <ul className="hero-facts rise" style={{ "--d": "1s" }}>
+  <li>
+    <strong>Computer &amp; Communication Engineering</strong>
+    <span>Manipal Institute of Technology</span>
+  </li>
+  <li>
+    <strong>Business Intern</strong>
+    <span>Porter</span>
+  </li>
+</ul>
     </section>
   );
 }
