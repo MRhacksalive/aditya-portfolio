@@ -56,7 +56,7 @@ Implemented backend services for data fetching, processing, and efficient API ha
 const lines = (text) => text.split("\n").map((l) => l.trim()).filter(Boolean);
 
 export default function Projects() {
-  const [open, setOpen] = useState(0);
+  const [open, setOpen] = useState(null);
 
   return (
     <SectionWrapper id="projects" title="Projects" note="Four builds, from databases to live maps.">

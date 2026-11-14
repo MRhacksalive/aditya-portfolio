@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 /* Flight-tracker background.
    - Soft red glows drift slowly behind everything.
@@ -61,6 +61,7 @@ function bez(p, t, w, h) {
 
 export default function SkyBackground() {
   const ref = useRef(null);
+  const [showStory, setShowStory] = useState(false);
 
   useEffect(() => {
     const canvas = ref.current;
@@ -210,7 +211,31 @@ export default function SkyBackground() {
     };
 
     const onMove = (e) => { mx = e.clientX; my = e.clientY; };
-    const onDown = (e) => addPing(e.clientX, e.clientY, 190);
+    const onDown = (e) => {
+      if (!reduce) addPing(e.clientX, e.clientY, 190);
+    };
+    const onClick = (e) => {
+      if (e.target.closest("a, button, input, textarea, select, [role=dialog]")) return;
+      const hit = flights.some((f) => {
+        const [x, y] = bez(f.p, f.t, w, h);
+        const [x2, y2] = bez(f.p, Math.min(1, f.t + 0.004), w, h);
+        const angle = Math.atan2(y2 - y, x2 - x);
+        const dx = e.clientX - x, dy = e.clientY - y;
+        const scale = f.layer.scale * 0.9;
+        const px = (dx * Math.cos(angle) + dy * Math.sin(angle)) / scale;
+        const py = (-dx * Math.sin(angle) + dy * Math.cos(angle)) / scale;
+        ctx.save();
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        ctx.beginPath();
+        HALF.forEach(([x, y], i) => (i ? ctx.lineTo(x, y) : ctx.moveTo(x, y)));
+        for (let i = HALF.length - 1; i >= 0; i--) ctx.lineTo(HALF[i][0], -HALF[i][1]);
+        ctx.closePath();
+        const contains = ctx.isPointInPath(px, py);
+        ctx.restore();
+        return contains;
+      });
+      if (hit) setShowStory(true);
+    };
 
     resize();
     if (reduce) {
@@ -219,6 +244,7 @@ export default function SkyBackground() {
       draw(0);
     }
     window.addEventListener("resize", resize);
+    window.addEventListener("click", onClick);
     if (!reduce) {
       window.addEventListener("pointermove", onMove, { passive: true });
       window.addEventListener("pointerdown", onDown, { passive: true });
@@ -228,10 +254,28 @@ export default function SkyBackground() {
     return () => {
       cancelAnimationFrame(raf);
       window.removeEventListener("resize", resize);
+      window.removeEventListener("click", onClick);
       window.removeEventListener("pointermove", onMove);
       window.removeEventListener("pointerdown", onDown);
     };
   }, []);
 
-  return <canvas ref={ref} className="sky" aria-hidden="true" />;
+  useEffect(() => {
+    if (!showStory) return;
+    const onKey = (e) => { if (e.key === "Escape") setShowStory(false); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [showStory]);
+
+  return <>
+    <canvas ref={ref} className="sky" aria-hidden="true" />
+    {showStory && <div className="flight-story-backdrop" onClick={() => setShowStory(false)}>
+      <div className="flight-story" role="dialog" aria-modal="true" aria-labelledby="flight-story-title" onClick={(e) => e.stopPropagation()}>
+        <button className="flight-story-close" onClick={() => setShowStory(false)} aria-label="Close" autoFocus>×</button>
+        <span className="flight-story-label">THE STORY BEHIND THE SKY</span>
+        <h2 id="flight-story-title">Why aeroplanes?</h2>
+        <p>I've been passionate about aeroplanes since my childhood. They inspired the theme of this portfolio, just a little more me.</p>
+      </div>
+    </div>}
+  </>;
 }

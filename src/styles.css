@@ -386,3 +386,10 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 800; font-stretch: va
   .mask > span, .rise { animation: none; }
   * { transition-duration: .01ms !important; }
 }
+
+.flight-story-backdrop { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 24px; background: rgba(5, 5, 8, .72); }
+.flight-story { position: relative; width: min(100%, 440px); padding: 38px; background: #171719; border: 1px solid rgba(240, 38, 47, .5); border-radius: 12px; box-shadow: 0 20px 70px rgba(0, 0, 0, .5); color: #f5f5f5; }
+.flight-story-label { color: #f04a50; font-size: .7rem; font-weight: 700; letter-spacing: .16em; }
+.flight-story h2 { margin: 12px 0; font-size: 1.7rem; }
+.flight-story p { margin: 0; color: #c9c9cc; line-height: 1.7; }
+.flight-story-close { position: absolute; top: 12px; right: 16px; border: 0; background: none; color: #eee; font-size: 1.8rem; cursor: pointer; }

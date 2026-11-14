@@ -1,7 +1,7 @@
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
 
-export default function Contact() {
+export default function Contact({ onShowStory }) {
   return (
     <section id="contact" className="contact">
       <div className="wrap">
@@ -29,7 +29,7 @@ export default function Contact() {
         </div>
 
         <footer className="foot">
-          <span>Aditya Kishore Roy</span>
+          <button type="button" className="foot-name" onClick={onShowStory}>Aditya Kishore Roy</button>
           <a href="#top">Back to top</a>
         </footer>
       </div>
